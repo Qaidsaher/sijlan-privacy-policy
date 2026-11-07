@@ -1,0 +1,12 @@
+{
+  "name": "sijlan-privacy-policy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sijlan privacy policy website built with Tailwind CSS",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/assets/styles.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

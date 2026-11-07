@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html { scroll-behavior:smooth; }
+  body { font-family:'IBM Plex Sans Arabic','Inter',Tahoma,Arial,sans-serif; }
+  [lang='en'] { font-family:'Inter','IBM Plex Sans Arabic',Arial,sans-serif; }
+  [hidden] { display:none !important; }
+  ::selection { background:#9df7d7; color:#064d49; }
+  :focus-visible { outline: 2px solid #0d9488; outline-offset:3px; }
+}
+@layer components {
+ .info-card { @apply rounded-[20px] border border-slate-200/75 bg-white px-5 py-5 shadow-[0_7px_27px_-22px_rgba(0,62,62,.35)] dark:border-slate-800 dark:bg-slate-900; }
+ .info-icon { @apply grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-teal-50 text-xs font-extrabold text-brand-700 dark:bg-teal-900/40 dark:text-teal-200; }
+ .policy-copy p { @apply m-0; }
+ .policy-copy p+p { @apply mt-4; }
+ .policy-copy strong { @apply font-extrabold text-slate-800 dark:text-white; }
+ .policy-copy code { @apply inline-block rounded-md bg-slate-100 px-1.5 py-0.5 align-baseline text-xs text-brand-700 dark:bg-slate-800 dark:text-teal-300; }
+ .policy-section:target { @apply bg-teal-50/40 dark:bg-teal-900/10; }
+}
+@media print {
+  header,aside,footer,#theme-toggle,#back-to-top,.info-card,#read-policy-link {display:none!important;}
+  body {color:#111!important;background:#fff!important}
+  .policy-section {break-inside:avoid;}
+  [data-language-panel="ar"] {display:block!important}
+  [data-language-panel="en"] {display:none!important}
+  .shadow-lg {box-shadow:none!important}
+}
