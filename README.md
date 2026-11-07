@@ -10,6 +10,18 @@
 **Contact address from app code:** `support@sijlan.app`
 **Policy updated:** 2026-11-07
 
+## Publishing without a custom GitHub Actions workflow
+
+The site is ready to serve directly from the repository root. Tailwind Play CDN renders utility styles in the browser and the HTML contains readable content even if external styles are unavailable.
+
+1. GitHub Repository > **Settings > Pages**.
+2. Under **Build and deployment > Source**, select **Deploy from a branch**.
+3. Select **main** and **/(root)**, then **Save**.
+4. Inspect the page deployment. GitHub Pages still uses a GitHub-managed Actions deployment under the hood, so account-wide Actions restrictions can still prevent publishing.
+5. Never copy the URL to Google Play until the site opens successfully in an incognito browser.
+
+The repository contains `.nojekyll` to skip Jekyll processing and no custom Actions workflow. For production optimization, the Tailwind source and package files remain available to compile CSS externally when a build environment is available.
+
 ## Local build
 
 ```sh
@@ -30,8 +42,8 @@ Open `dist/index.html` to preview; the GitHub Actions workflow builds and deploy
 - Make sure the Play Console **Data safety** answers match the version actually distributed.
 - Verify and secure backup handling in the app: current backup creation without a supplied password uses a **fixed default key**, and pre-restore snapshots can be unencrypted JSON. This is a code security issue, not a website issue.
 - Review local account deletion usability and exported-file removal instructions.
-- Under repository **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
-- Check the **Actions** tab for a successful deployment, then verify the live URL and set it in Play Console → App content → Privacy policy.
+- Under repository **Settings → Pages → Build and deployment**, choose **Deploy from a branch → main → /(root)**.
+- Verify the live URL renders correctly, and then set it in Play Console → App content → Privacy policy.
 
 ## Scope
 
