@@ -6,8 +6,8 @@
 
 **App:** سِجلان: دفتر حسابات وديون
 **Android package:** `com.saherqaid.sijlan`
-**Developer:** Saher Qaid (`saher qaid`)
-**Contact address from app code:** `support@sijlan.app`
+**Developer:** saher qaid (`saher qaid`)
+**Public support and privacy email (provided by developer):** `saherqaid2020@gmail.com`
 **Policy updated:** 2026-11-07
 
 ## Publishing without a custom GitHub Actions workflow
@@ -35,8 +35,8 @@ Open `dist/index.html` to preview; the GitHub Actions workflow builds and deploy
 
 ## Google Play checklist (verify before re-submission)
 
-- Confirm the **public developer name** in Play Console matches **Saher Qaid / saher qaid**.
-- Confirm `support@sijlan.app` is a **real working inbox** controlled by the developer and ideally matches Play listing support contact. Replace it if not.
+- Confirm the **public developer name** in Play Console matches **saher qaid / saher qaid**.
+- Confirm `saherqaid2020@gmail.com` receives mail and matches the Google Play listing contact. Replace it if not.
 - Verify that the **published APK/AAB** actually matches the reviewed `Qaidsaher/sijlan` code. If not, update the policy.
 - Add a **direct accessible privacy-policy link within the app**. The current registration checkbox names the policy but does not provide a tappable link in the reviewed code.
 - Make sure the Play Console **Data safety** answers match the version actually distributed.
